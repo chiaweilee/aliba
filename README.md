@@ -2,7 +2,7 @@
 
 Aliba is a JavaScript library.
 
-* **[hyphenateCss](https://github.com/chiaweilee/hyphenate-css/):** convert JavaScript style object into style string by using `react-dom`'s shared [hyphenateStyleName](https://github.com/chiaweilee/aliba/blob/master/packages/shared/hyphenateStyleName.js), e.g, `hyphenateCss({ fontSize: '12px' })` result `font-size: 12px;`
+* **[hyphenateCss](https://github.com/chiaweilee/aliba/tree/master/packages/hyphenate-css):** convert JavaScript style object into style string by using `react-dom`'s shared [hyphenateStyleName](https://github.com/chiaweilee/aliba/blob/master/packages/shared/hyphenateStyleName.js), e.g, `hyphenateCss({ fontSize: '12px' })` result `font-size: 12px;`
 
 ## Installation
 
