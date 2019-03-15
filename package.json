@@ -1,0 +1,34 @@
+{
+  "name": "aliba",
+  "version": "0.1.0",
+  "description": "a lib alibaba",
+  "main": "index.js",
+  "files": [
+    "packages",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "mocha packages/*/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiaweilee/aliba.git"
+  },
+  "keywords": [
+    "lib"
+  ],
+  "author": "+v",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiaweilee/aliba/issues"
+  },
+  "homepage": "https://github.com/chiaweilee/aliba#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.15.1",
+    "eslint-config-ali": "^5.0.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "mocha": "^6.0.2"
+  }
+}

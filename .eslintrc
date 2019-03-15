@@ -1,0 +1,7 @@
+{
+  "extends": "ali",
+  "env": {
+    "mocha": true,
+    "node": true
+  }
+}
