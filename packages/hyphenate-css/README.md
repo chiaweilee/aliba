@@ -6,8 +6,8 @@ import { hyphenateCss } from 'aliba'
 
 ```javascript
 hyphenateCss({
-  fontSize: '12px'
+  fontSize: '12px',
+  backgroundColor: '#fff',
 })
-// string
-// font-size:12px;
+// String 'font-size:12px;background-color:#fff;'
 ```
