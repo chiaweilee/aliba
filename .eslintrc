@@ -1,7 +1,10 @@
 {
-  "extends": "ali",
+  "extends": ["ali", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
   "env": {
-    "mocha": true,
-    "node": true
+    "mocha": true
   }
 }

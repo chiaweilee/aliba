@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const hyphenateCss = require('./');
+const hyphenateCss = require('./').default;
 
 describe('hyphenate-css', () => {
   it('hyphenate style object correctly', () => {
@@ -7,8 +7,11 @@ describe('hyphenate-css', () => {
       fontSize: '12px',
       backgroundColor: '#fff',
     };
+
     const r = 'font-size:12px;background-color:#fff;';
 
-    expect(hyphenateCss(t)).to.equal(r);
+    const f = hyphenateCss(t);
+
+    expect(f).to.equal(r);
   });
 });

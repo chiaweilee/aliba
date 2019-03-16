@@ -4,8 +4,10 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
 const uppercasePattern = /([A-Z])/g;
 const msPattern = /^ms-/;
+
 /**
  * Hyphenates a camelcased CSS property name, for example:
  *
@@ -19,10 +21,9 @@ const msPattern = /^ms-/;
  * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
  * is converted to `-ms-`.
  */
-export default function hyphenateStyleName(name) {
-    return name
-        .replace(uppercasePattern, '-$1')
-        .toLowerCase()
-        .replace(msPattern, '-ms-');
+export default function hyphenateStyleName(name: string): string {
+  return name
+    .replace(uppercasePattern, '-$1')
+    .toLowerCase()
+    .replace(msPattern, '-ms-');
 }
-//# sourceMappingURL=hyphenateStyleName.js.map
