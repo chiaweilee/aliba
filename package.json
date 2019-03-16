@@ -7,6 +7,7 @@
     "lib"
   ],
   "scripts": {
+    "lint": "tslint 'src/**/*.ts'",
     "test": "npm run build && nyc --reporter=text mocha lib/*/*.spec.js",
     "build": "npx babel src --out-dir lib --presets=@babel/preset-env --ignore 'src/types/*'"
   },
@@ -32,6 +33,7 @@
     "chai": "^4.2.0",
     "eslint": "^5.15.1",
     "eslint-config-ali": "^5.0.1",
+    "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
     "mocha": "^6.0.2",
