@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "test": "npm run build && nyc --reporter=text mocha lib/*/*.spec.js",
-    "build": "npx babel packages --out-dir lib --presets=@babel/preset-env --ignore 'packages/types/*'"
+    "build": "npx babel src --out-dir lib --presets=@babel/preset-env --ignore 'src/types/*'"
   },
   "repository": {
     "type": "git",
