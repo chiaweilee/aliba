@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",
     "test": "npm run build && nyc --reporter=text mocha lib/*/*.spec.js",
-    "build": "npx babel src --out-dir lib --presets=@babel/preset-env --ignore 'src/types/*'"
+    "build": "rm -rf lib && npx babel src --out-dir lib --presets=@babel/preset-env --ignore 'src/types/*'"
   },
   "repository": {
     "type": "git",
