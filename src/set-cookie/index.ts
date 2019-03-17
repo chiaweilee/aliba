@@ -5,12 +5,7 @@ import call from '../shared/call';
 import pair from '../key-value/pair';
 import unpair from '../key-value/unpair';
 
-export const DEL = {
-  value: '',
-  expires: 'Thu, 01 Jan 1970 00:00:00 GMT',
-};
-
-export default (updater: Updater, callback: Function | void): void => {
+const setCookie = (updater: Updater, callback?: Function | void): void => {
   const cookie: object = unpair(document.cookie);
 
   const newCookie = (() => {
@@ -24,8 +19,8 @@ export default (updater: Updater, callback: Function | void): void => {
     return {};
   })();
 
-  forEach(newCookie, (value: string | SetCookieSyntaxObject, name) => {
-    if (typeof value === 'string') {
+  forEach(newCookie, (value: string | number | SetCookieSyntaxObject, name) => {
+    if (typeof value === 'string' || typeof value === 'number') {
       document.cookie = `${name}=${value}`;
     } else if (isNotArrayObject(value)) {
       const { value: _value } = value;
@@ -33,7 +28,7 @@ export default (updater: Updater, callback: Function | void): void => {
         [name]: _value,
       };
 
-      const insert = (key: string) => {
+      const insert = (key: string | number) => {
         if (value[key]) t[key] = value[key];
       };
 
@@ -48,3 +43,5 @@ export default (updater: Updater, callback: Function | void): void => {
 
   call(callback);
 };
+
+export default setCookie;

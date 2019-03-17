@@ -1,11 +1,16 @@
 let _separator = ';';
 
-export default (pair: string, separator: string | void): object => {
+export default (pair: string, separator?: string | void): object => {
+  if (!pair) return {};
+
   const result = {};
-  pair.trim().split(separator || _separator).forEach((keyValue) => {
-    const [key, value] = keyValue.trim().split('=')
-    result[key.trim()] = decodeURIComponent(value.trim());
-  });
+  pair
+    .trim()
+    .split(separator || _separator)
+    .forEach(keyValue => {
+      const [key, value] = keyValue.trim().split('=');
+      result[key.trim()] = value.trim();
+    });
 
   return result;
 };
