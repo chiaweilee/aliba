@@ -6,3 +6,12 @@ export type Updater = (state: object, props?: object) => StateChange;
 export interface StyleObject {
     [index: string]: string;
 }
+
+export interface SetCookieSyntaxObject {
+  value: string | number;
+  path?: string;
+  domain?: string;
+  'max-age'?: string | number;
+  expires?: string;
+  secure?: boolean;
+}
