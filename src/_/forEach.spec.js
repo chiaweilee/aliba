@@ -27,4 +27,18 @@ describe('forEach', () => {
 
     expect(e).to.deep.equal(r);
   });
+
+  it('forEach null correctly', () => {
+    const t = null;
+
+    const r = undefined;
+
+    let e;
+
+    forEach(t, () => {
+      e = true;
+    });
+
+    expect(e).to.deep.equal(r);
+  });
 });

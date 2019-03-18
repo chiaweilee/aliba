@@ -21,4 +21,14 @@ describe('_map', () => {
 
     expect(f).to.deep.equal(r);
   });
+
+  it('map null correctly', () => {
+    const t = null;
+
+    const r = [];
+
+    const f = map(t, _t => _t);
+
+    expect(f).to.deep.equal(r);
+  });
 });
