@@ -1,6 +1,6 @@
 {
   "name": "aliba",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "a lib alibaba",
   "main": "lib/index.js",
   "files": [
