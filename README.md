@@ -5,6 +5,7 @@ Aliba is a JavaScript library.
 * **[hyphenateCss](https://github.com/chiaweilee/aliba/tree/master/src/hyphenate-css):** convert JavaScript style object into style string by using `react-dom`'s shared [hyphenateStyleName](https://github.com/chiaweilee/aliba/blob/master/src/shared/hyphenateStyleName.ts), e.g, `hyphenateCss({ fontSize: '12px' })` result `font-size: 12px;`
 * **[keyValue](https://github.com/chiaweilee/aliba/tree/master/src/key-value):** pair/unpair key-value pair, e.g, `pair({ a: 1, b: 2 })` result `a=1;b=2`, `unpair('a=1&b=2', '&')` result `{ a: 1, b: 2 }`
 * **[setCookie](https://github.com/chiaweilee/aliba/tree/master/src/set-cookie):** set-cookie as `react`'s `setState()` like
+* **[shallowEqual](https://github.com/chiaweilee/aliba/blob/master/src/shared/shallowEqual.ts):** `react`'s `shallowEqual`
 
 ## Installation
 
