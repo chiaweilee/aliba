@@ -37,10 +37,10 @@ setCookie({
 
 #### Delete Cookie
 
-```javascript
-import { setCookie, delCookie as DELETE } from 'aliba'
+*breaking changed from 0.2.6*
 
+```javascript
 setCookie({
-  d: DELETE,
+  d: null,
 })
 ```

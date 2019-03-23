@@ -5,6 +5,11 @@ import call from '../shared/call';
 import pair from '../key-value/pair';
 import unpair from '../key-value/unpair';
 
+const delCookie = {
+  value: '',
+  expires: 'Thu, 01 Jan 1970 00:00:01 GMT',
+};
+
 const setCookie = (updater: Updater, callback?: Function | void): void => {
   const cookie: object = unpair(document.cookie);
 
@@ -20,7 +25,9 @@ const setCookie = (updater: Updater, callback?: Function | void): void => {
   })();
 
   forEach(newCookie, (value: string | number | SetCookieSyntaxObject, name) => {
-    if (typeof value === 'string' || typeof value === 'number') {
+    if (value === null) {
+      document.cookie = `${name}=${pair(delCookie)}`;
+    } else if (typeof value === 'string' || typeof value === 'number') {
       document.cookie = `${name}=${value}`;
     } else if (isNotArrayObject(value)) {
       const { value: _value } = value;
