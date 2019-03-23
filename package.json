@@ -9,7 +9,9 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",
     "test": "npm run build && nyc --reporter=text mocha lib/*/*.spec.js",
-    "build": "rm -rf lib && npx babel src --out-dir lib --presets=@babel/preset-env --ignore 'src/types/*'"
+    "build": "npm run clean && npm run build:babel",
+    "build:babel": "npx babel src --out-dir lib --extensions \".ts\" --ignore 'src/types/*'",
+    "clean": "rm -rf lib"
   },
   "repository": {
     "type": "git",
@@ -27,8 +29,9 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/register": "^7.0.0",
+    "@babel/plugin-transform-typescript": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-typescript": "^7.3.3",
     "@types/node": "^11.11.3",
     "chai": "^4.2.0",
     "eslint": "^5.15.1",
@@ -46,5 +49,6 @@
   },
   "dependencies": {
     "@types/mocha": "^5.2.6"
-  }
+  },
+  "browserslist": "> 0.25%, not dead"
 }
