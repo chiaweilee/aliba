@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const isNotArrayObject = require('./isNotArrayObject').default;
+const isNotArrayObject = require('../isNotArrayObject').default;
 
 describe('isNotArrayObject', () => {
   it('isNotArrayObject detect array correctly', () => {

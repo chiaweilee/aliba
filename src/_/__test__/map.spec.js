@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const map = require('./map').default;
+const map = require('../map').default;
 
 describe('_map', () => {
   it('map array correctly', () => {

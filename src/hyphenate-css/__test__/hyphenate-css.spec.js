@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const hyphenateCss = require('./').default;
+const hyphenateCss = require('../index').default;
 
 describe('hyphenate-css', () => {
   it('hyphenate style object correctly', () => {

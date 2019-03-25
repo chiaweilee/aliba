@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const call = require('./call').default;
+const call = require('../call').default;
 
 let e;
 

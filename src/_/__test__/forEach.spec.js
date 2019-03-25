@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const forEach = require('./forEach').default;
+const forEach = require('../forEach').default;
 
 describe('forEach', () => {
   it('forEach array correctly', () => {
