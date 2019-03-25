@@ -1,7 +1,8 @@
 let _separator = ';';
 
 export default (pair: string, separator?: string | void): object => {
-  if (!pair) return {};
+  if (typeof pair !== 'string') return {};
+  if (!pair.length) return {};
 
   const result = {};
   pair
