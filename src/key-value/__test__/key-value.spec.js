@@ -33,6 +33,16 @@ describe('key-value', () => {
     expect(f).to.deep.equal(r);
   });
 
+  it('un-pair non-key-value string correctly', () => {
+    const t = 'a1';
+
+    const r = {};
+
+    const f = unpair(t);
+
+    expect(f).to.deep.equal(r);
+  });
+
   it('un-pair empty value correctly', () => {
     const t = 'a=;b=;c=';
 

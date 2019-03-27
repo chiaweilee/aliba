@@ -5,13 +5,14 @@ export default (pair: string, separator?: string | void): object => {
   if (!pair.length) return {};
 
   const result = {};
-  pair
-    .trim()
-    .split(separator || _separator)
-    .forEach(keyValue => {
-      const [key, value] = keyValue.trim().split('=');
-      result[key.trim()] = value.trim();
-    });
+  const separators = pair.trim().split(separator || _separator);
+
+  if (separators.length < 2) return {};
+
+  separators.forEach(keyValue => {
+    const [key, value] = keyValue.trim().split('=');
+    result[key.trim()] = value.trim();
+  });
 
   return result;
 };
