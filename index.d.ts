@@ -1,9 +1,6 @@
 import { Collection, Iteratee, StyleObject, Updater } from './types';
 
-export = Aliba;
-export as namespace Aliba;
-
-declare namespace Aliba {
+declare module 'aliba' {
   function forEach(collection: Collection, iteratee: Iteratee): void;
   function map(collection: Collection, iteratee: Iteratee): Array<any>;
   function hyphenateStyleName(name: string): string;
