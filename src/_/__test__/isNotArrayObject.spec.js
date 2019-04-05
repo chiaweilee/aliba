@@ -10,6 +10,10 @@ describe('isNotArrayObject', () => {
     expect(isNotArrayObject({})).to.equal(true);
   });
 
+  it('isNotArrayObject detect Function correctly', () => {
+    expect(isNotArrayObject(Function)).to.equal(false);
+  });
+
   it('isNotArrayObject detect null correctly', () => {
     expect(isNotArrayObject(null)).to.equal(false);
   });
