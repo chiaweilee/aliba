@@ -4,7 +4,9 @@
   "description": "a lib alibaba",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "index.d.ts",
+    "types.d.ts"
   ],
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",

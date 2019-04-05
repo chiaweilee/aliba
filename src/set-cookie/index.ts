@@ -1,4 +1,4 @@
-import { Updater, SetCookieSyntaxObject } from '../types';
+import { Updater, SetCookieSyntaxObject } from '../../types';
 import forEach from '../_/forEach';
 import isNotArrayObject from '../_/isNotArrayObject';
 import call from '../shared/call';

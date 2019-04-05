@@ -1,4 +1,4 @@
-import { StyleObject } from '../types';
+import { StyleObject } from '../../types';
 import map from '../_/map';
 import hyphenateStyleName from '../shared/hyphenateStyleName';
 

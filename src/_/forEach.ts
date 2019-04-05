@@ -1,4 +1,4 @@
-import { Collection, Iteratee } from '../types';
+import { Collection, Iteratee } from '../../types';
 import isNotArrayObject from './isNotArrayObject';
 
 export default (collection: Collection, iteratee: Iteratee): void => {
