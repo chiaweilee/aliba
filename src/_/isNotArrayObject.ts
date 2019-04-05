@@ -1,3 +1,3 @@
-export default (obj: object): boolean => {
-  return typeof obj === 'object' && obj !== null && !Array.isArray(obj);
+export default (object: object): boolean => {
+  return object !== null && typeof object === 'object' && !Array.isArray(object);
 };
