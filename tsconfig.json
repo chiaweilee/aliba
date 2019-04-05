@@ -3,11 +3,8 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
     "lib": ["esnext", "dom"],
-    "esModuleInterop": true,
     "sourceMap": false,
-    "baseUrl": ".",
-    "allowSyntheticDefaultImports": true
+    "baseUrl": "."
   }
 }
