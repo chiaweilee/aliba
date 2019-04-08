@@ -1,4 +1,4 @@
-export default (fn: any, ...argv): void => {
+export default (fn: any, ...argv): any => {
   if (typeof fn === 'function') {
     return fn(...argv);
   }
