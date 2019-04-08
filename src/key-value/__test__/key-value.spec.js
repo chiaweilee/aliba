@@ -43,6 +43,16 @@ describe('key-value', () => {
     expect(f).to.deep.equal(r);
   });
 
+  it('un-pair single key-value string correctly', () => {
+    const t = 'a=1';
+
+    const r = { a: '1' };
+
+    const f = unpair(t);
+
+    expect(f).to.deep.equal(r);
+  });
+
   it('un-pair empty value correctly', () => {
     const t = 'a=;b=;c=';
 
@@ -89,6 +99,14 @@ describe('key-value', () => {
     const r = 'a=1&b=2';
 
     const f = pair(t, '&');
+
+    expect(f).to.equal(r);
+  });
+
+  it('pair null correctly', () => {
+    const r = '';
+
+    const f = pair(null);
 
     expect(f).to.equal(r);
   });

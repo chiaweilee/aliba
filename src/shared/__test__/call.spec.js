@@ -18,3 +18,12 @@ describe('call', () => {
     expect(f).to.deep.equal(r);
   });
 });
+
+describe('call', () => {
+  it('call null correctly', () => {
+    const f = call.apply(null, [null]);
+
+    expect(e).to.equal(true);
+    expect(f).to.deep.equal(undefined);
+  });
+});
