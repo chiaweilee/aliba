@@ -1,6 +1,6 @@
 {
   "name": "aliba",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "description": "a lib alibaba",
   "main": "lib/index.js",
   "files": [
@@ -9,7 +9,7 @@
     "types.d.ts"
   ],
   "scripts": {
-    "prepublish": "npm run lint && npm run test && npm run build",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
     "lint": "tslint 'src/**/*.ts'",
     "test": "umi test --coverage",
     "build": "npm run clean && npm run build:babel",
@@ -35,7 +35,8 @@
     "@babel/plugin-transform-typescript": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-typescript": "^7.3.3",
-    "@types/node": "^11.11.3",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.17",
     "chai": "^4.2.0",
     "eslint": "^5.15.1",
     "eslint-config-ali": "^5.0.1",
@@ -52,7 +53,7 @@
     "umi": "^2.6.8"
   },
   "dependencies": {
-    "@types/mocha": "^5.2.6"
+    "lodash": "^4.17.11"
   },
   "browserslist": "> 0.25%, not dead"
 }
